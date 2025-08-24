@@ -4,7 +4,8 @@ import numpy as np
 
 def summarize(df):
 
-    df = df.groupby(['city']).aggregate({'score': 'mean'}).reset_index()
+    #df = df.groupby(['city']).aggregate({'score': 'mean'}).reset_index()
+    df = df.groupby(['city']).aggregate({'score': 'sum'}).reset_index()
 
     return df
 
